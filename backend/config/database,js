@@ -1,0 +1,12 @@
+const mongoose = require("mongoose");
+
+
+exports.connectDataBase = () =>{
+    mongoose
+    .connect("mongodb://0.0.0.0:27017/MernSocial")
+    .then(()=>{
+        console.log("Connected to mongodb ");
+    }).catch((err)=>{
+        console.log(err);
+    })
+}
